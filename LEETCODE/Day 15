@@ -1,4 +1,4 @@
-valid plindrome: 
+valid palindrome: 
 
 class Solution {
 public:
