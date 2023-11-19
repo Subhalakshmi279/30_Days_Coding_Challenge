@@ -1,0 +1,33 @@
+Sums in a Triangle:
+
+#include<iostream>
+using namespace std;
+#include<cmath>
+int main()
+{
+    int test_case;
+    int num;
+    int arr[100][100];
+    cin>>test_case;
+    while(test_case--)
+    {
+    cin>>num;
+    for(int i=0;i<num;i++)
+    {
+        for(int j=0;j<=i;j++)
+        {
+            cin>>arr[i][j];
+        }
+    }
+
+    for(int i=num-2;i>=0;i--)
+    {
+        for(int j=0;j<=i;j++)
+        {
+            arr[i][j]=arr[i][j]+max(arr[i+1][j],arr[i+1][j+1]);
+        }
+    }
+    cout<<arr[0][0]<<endl;
+    }
+    return 0;
+}
