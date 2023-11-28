@@ -1,0 +1,21 @@
+Lucky Number:
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    long long x;
+	    cin>>x;
+	    int i=0;
+	    while(x%2==0){
+	        x/=2;
+	        i++;
+	    }
+	    (i%2==0)?cout<<1<<endl:cout<<0<<endl;
+	}
+	return 0;
+}
