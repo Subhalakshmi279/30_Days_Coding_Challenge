@@ -1,35 +1,19 @@
-Palindromic String
-#include <bits/stdc++.h> 
-
-char toLowercase(char ch) {
-    if ((ch >= 'a' && ch <= 'z') || (ch >= '0' && ch <= '9')) {
-        return ch;
-    } else if (ch >= 'A' && ch <= 'Z') {
-        char temp = ch - 'A' + 'a';
-        return temp;
-    } else {
-        return '\0'; 
-    }
-}
-
-bool checkPalindrome(string s) {
-    int st = 0;
-    int e = s.size() - 1;
-
-    while (st <= e) {
-        char startChar = toLowercase(s[st]);
-        char endChar = toLowercase(s[e]);
-
-        if (startChar == '\0') {
-            st++; 
-        } else if (endChar == '\0') {
-            e--; 
-        } else if (startChar != endChar) {
-            return false;
-        } else {
-            st++;
-            e--;
+Container with most water:
+class Solution {
+public:
+    int maxArea(vector<int>& hit) {
+        int mx = INT_MIN;
+        int st = 0; 
+        int end = hit.size() - 1;
+        while(st < end){
+            int indDif = end - st;
+            int mn = min(hit[st], hit[end]);
+            mx = max(mx, (indDif * mn));
+            if(hit[st] < hit[end])
+                st++;
+            else
+                end--;
         }
+        return mx;
     }
-    return true;
-}
+};
