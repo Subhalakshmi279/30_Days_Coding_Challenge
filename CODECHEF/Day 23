@@ -1,0 +1,26 @@
+Emotional Proximity
+
+#include <iostream>
+#include<bits/stdc++.h> 
+using namespace std;
+
+int main() {
+	// your code goes here
+	
+	long long t;
+    cin>>t; 
+while(t--){
+    double p,x,y,z; 
+    cin>>p>>x>>y>>z; 
+    
+    if(z==1){
+        double res=(double)((x*p)/100); 
+        cout<<(p+res)<<endl;
+    }
+    else{
+        double res=(y*p)/100; 
+        cout<<(p-res)<<endl;
+    }
+}
+	return 0;
+}
