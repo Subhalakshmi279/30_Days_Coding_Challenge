@@ -1,0 +1,25 @@
+Distinct Colors:
+
+#include<bits/stdc++.h>
+using namespace std;
+int main ()
+{
+    long long n,m,x,max1,count=1;
+    cin>>n;
+    while(n--)
+    {
+        cin>>m;
+        count=1;
+        while(m--)
+        {
+            cin>>x;
+            if(count==1)
+            {
+                max1=x;
+            }
+            max1=max(x,max1);
+            count++;
+        }
+            cout<<max1<<endl;
+    }
+}
