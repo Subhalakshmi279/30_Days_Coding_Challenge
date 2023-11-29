@@ -1,0 +1,47 @@
+Product of an array
+
+#define ll long long
+
+int mod = 1e9 + 7;
+
+int *getProductArrayExceptSelf(int *arr, int n)
+
+{
+
+    //Write your code here
+
+    int *a = new int[n];
+
+    ll pro = 1,j;
+
+    ll flag = 0;
+
+    for(j = 0; j<n; j++){
+
+           
+
+            if(arr[j] != 0) pro = (pro * arr[j])%mod;
+
+            else flag += 1;
+
+    }
+
+    for(int i = 0; i<n; i++){
+
+        if(flag == 0) a[i] = pro/(arr[i]%mod);
+
+        else if(flag == 1){
+
+            if(arr[i] == 0) a[i] = pro;
+
+            else a[i] = 0;
+
+        }
+
+        else a[i] = 0;
+
+    }
+
+    return a;
+
+}
