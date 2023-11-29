@@ -1,0 +1,17 @@
+Number of Rectangles:
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    long N,M;
+	    cin>>N>>M;
+	    long n=N*(N+1)/2;
+	    long m=M*(M+1)/2;
+	    long num_rec=n*m-(N*M);
+	    cout<<num_rec<<endl;
+	}
+	return 0;
+}
