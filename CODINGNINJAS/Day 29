@@ -1,0 +1,10 @@
+Sum of even numbers till N
+#include <bits/stdc++.h> 
+
+long long evenSumTillN(int n) {
+
+    n=n/2;
+
+    return (long long)n*(n+1);
+
+}
